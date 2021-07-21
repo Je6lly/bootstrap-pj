@@ -6,13 +6,13 @@ $background-pale: #D1C4E9;
 // Height variables
 $carousel-item-height: 300px;
 
-@mixin zero-margin($pad-up-dn, $pad-left-right) {
+@mixin zero-margin ($pad-up-dn: 0px, $pad-left-right: 0px) {
 	margin:0px auto;
 	padding: $pad-up-dn $pad-left-right;
 }
 
 .row-header{
-    @include zero-margin(0px,0px);
+    @include zero-margin();
 }
 
 .row-content {
@@ -53,6 +53,7 @@ body{
     border-bottom: 1px solid $lt-gray;
     padding: 10px;
 }
+
 .carousel {
     background:$background-dark;
 
@@ -72,6 +73,19 @@ body{
     position: absolute;
     bottom: 0px;
     z-index: 1;
+}
+
+.modal-header{
+    background-color: $background-dark;
+    color: floralwhite;
+
+    .close{
+        color: floralwhite;
+    }
+}
+
+.modal-body{
+    background-color: $background-pale;
 }
 
 .jumbotron{
